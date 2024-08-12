@@ -72,6 +72,3 @@
           image: "https://m.media-amazon.com/images/I/71Uz+538a1L._AC_SX679_.jpg"
       
 },
-
-
-database
