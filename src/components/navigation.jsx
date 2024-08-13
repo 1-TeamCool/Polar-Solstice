@@ -11,7 +11,7 @@ const Navigation = () => {
                         <img style={{width: "100px", borderRadius: "20px"}} src={homeImage} alt="Home Image" />
                     </Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="/home">Home</Nav.Link>
+                        <Nav.Link href="/homepage">Home</Nav.Link>
                         <Nav.Link href="/products">Products</Nav.Link>
                         <Nav.Link href="/account">Account</Nav.Link>
                         <Nav.Link href="/cart">My Cart</Nav.Link>
