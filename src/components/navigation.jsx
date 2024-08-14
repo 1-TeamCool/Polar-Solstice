@@ -8,7 +8,7 @@ const Navigation = () => {
             <Navbar bg="dark" data-bs-theme="dark">
                 <Container>
                     <Navbar.Brand href="/">
-                        <img style={{width: "100px", borderRadius: "20px"}} src={homeImage} alt="Home Image" />
+                        <img style={{height: "100px", width: "100px", borderRadius: "50px"}} src={homeImage} alt="Home Image" />
                     </Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>

@@ -1,11 +1,11 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import {Card, Button} from "react-bootstrap";
 
 const Product = ({product, handleBuyProduct, handleProductClick}) => {
     return (
         <>
             {product && product?.name &&
-                <Card style={{width: '18rem', position: 'relative', paddingBottom: '3rem', cursor: 'pointer'}}>
+                <Card style={{width: '18rem', position: 'relative', paddingBottom: '3rem', cursor: 'pointer', border: 'solid 5px'}}>
                     <Card.Body className="text-center">
                         <Card.Title>{product?.name}</Card.Title>
                         <Card.Img onClick={()=>handleProductClick(product.id)} variant="top" src={product.image}

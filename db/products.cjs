@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+
 const client = require('./client.cjs');
 
 const addProduct = async(name, details, price, img) => {
