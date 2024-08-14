@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 export const addToCart = (product) => {
     const cart = getCartFromLocalStorage();
     //see if the product exists already

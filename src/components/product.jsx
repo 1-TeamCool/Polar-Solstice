@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import {Card, Button} from "react-bootstrap";
 
 const Product = ({product, handleBuyProduct, handleProductClick}) => {
