@@ -1,32 +1,42 @@
-/* eslint-disable react/prop-types */
-import {Card, Button} from "react-bootstrap";
+import React from 'react';
+import './product.css';
 
-const Product = ({product, handleBuyProduct, handleProductClick}) => {
+const Product = ({ product, handleBuyProduct, handleProductClick }) => {
+
+    const formatPrice = (price) => {
+        return new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+        }).format(price);
+    };
+
     return (
         <>
-            {product && product?.name &&
-                <Card style={{width: '18rem', position: 'relative', paddingBottom: '3rem', cursor: 'pointer', border: 'solid 5px'}}>
-                    <Card.Body className="text-center">
-                        <Card.Title>{product?.name}</Card.Title>
-                        <Card.Img onClick={()=>handleProductClick(product.id)} variant="top" src={product.image}
-                                  style={{
-                                      maxWidth: '250px',
-                                      height: '250px',
-                                      width: 'auto',
-                                      objectFit: 'contain',
-                                      margin: '0 auto',
-                                      display: 'block'
-                                  }}  />
-                    </Card.Body>
-                    <Card.Footer className="d-flex justify-content-between"
-                                 style={{position: 'absolute', bottom: '0', width: '100%'}}>
-                        <div style={{fontWeight: 'bold'}}>{product.price}</div>
-                        <Button variant="primary" onClick={()=>handleBuyProduct(product.id)}>Buy</Button>
-                    </Card.Footer>
-                </Card>}
-            {(!product || !product?.name) && <>Missing Product</>}
+            {product && product?.name ? (
+                <div className="product-card" onClick={() => handleProductClick(product.product_id)}>
+                    <div className="product-card-body">
+                        <h3 className="product-title">{product?.name}</h3>
+                        <img
+                            className="product-image"
+                            src={product.image}
+                            alt={product.name}
+                        />
+                    </div>
+                    <div className="product-footer">
+                        <div className="product-price">{formatPrice(product.price)}</div>
+                        <button className="buy-button" onClick={(e) => {
+                            e.stopPropagation(); // Prevent triggering the card's onClick
+                            handleBuyProduct(product.product_id);
+                        }}>
+                            Buy
+                        </button>
+                    </div>
+                </div>
+            ) : (
+                <>Missing Product</>
+            )}
         </>
-    )
-}
+    );
+};
 
 export default Product;
