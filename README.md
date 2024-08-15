@@ -1,5 +1,26 @@
 # Polar Solstice
 
+To run the project as of 8pm on 8/14/2024
+Install postgres and create a user
+In postgres create a database and give the new user permissions
+Update the config.json - development section with the new credentials
+
+From the command line run - npm run both
+
+
+1. Concurrently is install
+2. The "both" script will connect to the databse (IF you have the correct
+credentials) and create the table and seed it with the products
+2a. It will then start the node server (for the products route/endpoint)
+2b. It will then start the react server on localhost:5173
+
+NOTE: the node server will run on port 3000 by default
+this is hardcode in the code inside products.jsx and server.js
+
+To change the seeds modify - seed.js
+
+
+
 {
           id: 1,
           name: "Ultra Mittens"

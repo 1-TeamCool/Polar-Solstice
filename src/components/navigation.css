@@ -1,0 +1,46 @@
+/* Main navbar container */
+.custom-navbar {
+    background-color: #343a40; /* Dark background similar to Bootstrap's dark theme */
+    padding: .75rem 0;
+}
+
+/* Flex container for brand and nav links */
+.custom-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Brand container */
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Image inside the brand */
+.brand-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+/* Navigation container */
+.custom-nav {
+    display: flex;
+    gap: 2rem; /* Space between each nav link */
+}
+
+/* Individual nav links */
+.custom-nav-link {
+    color: #ffffff; /* White color for the links */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.custom-nav-link:hover {
+    color: #adb5bd; /* Light gray on hover */
+}

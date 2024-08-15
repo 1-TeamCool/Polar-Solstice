@@ -36,10 +36,6 @@ input {
     outline: none;
 }
 
-div {
-    margin-top: 5px;
-}
-
 .form:hover {
     font-size: x-large;
 }

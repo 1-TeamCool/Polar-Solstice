@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "polar",
+    "password": "p0l@r",
+    "database": "polar",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "polar",
+    "password": "p0l@r",
+    "database": "polar",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "polar",
+    "password": "p0l@r",
+    "database": "polar",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
